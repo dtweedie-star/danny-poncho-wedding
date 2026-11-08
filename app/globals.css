@@ -1,0 +1,314 @@
+:root {
+  --limestone: #e7d5ba;
+  --harbour: #295569;
+  --terracotta: #af6745;
+  --sandstone: #c99b71;
+  --turquoise: #328b87;
+  --ink: #17303a;
+  --cream: #f5eee4;
+  --white: #fffdf9;
+  --max: 1440px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--limestone);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main { overflow: hidden; }
+
+.section {
+  min-height: 100svh;
+  position: relative;
+  padding: clamp(24px, 4vw, 64px);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--limestone);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.monogram { font-weight: 700; }
+
+.hero-copy { align-self: center; }
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 400;
+  line-height: 0.72;
+  letter-spacing: -0.065em;
+}
+
+.hero h1 span {
+  margin-left: 29vw;
+  font-size: 0.28em;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.hero-date,
+.scroll-note {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.scroll-note { justify-self: end; }
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--harbour);
+  color: var(--cream);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  gap: 1px;
+}
+
+.countdown-unit {
+  border-top: 1px solid rgba(255,255,255,.35);
+  padding-top: 1rem;
+}
+
+.countdown-unit strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 10vw, 10rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.countdown-unit span {
+  display: block;
+  margin-top: .8rem;
+  font-size: .65rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.editorial { background: var(--cream); }
+
+.editorial-copy {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  max-width: var(--max);
+  margin: 0 auto 8vw;
+}
+
+.editorial-copy h2 {
+  margin: 0;
+  max-width: 800px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: .95;
+}
+
+.photo {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(50,139,135,.55), rgba(175,103,69,.52)),
+    var(--sandstone);
+  color: rgba(255,255,255,.9);
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.photo span {
+  padding: .6rem .8rem;
+  border: 1px solid rgba(255,255,255,.55);
+  font-size: .65rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.photo-wide {
+  min-height: 70svh;
+  max-width: var(--max);
+  margin: 0 auto 8vw;
+}
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.photo-portrait { min-height: 70svh; }
+.photo-portrait.offset { margin-top: 14vw; }
+
+.identity {
+  display: grid;
+  place-items: center;
+  background: var(--terracotta);
+  color: var(--cream);
+  text-align: center;
+}
+
+.logo-placeholder {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  opacity: .18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 6rem);
+}
+
+.logo-placeholder b { font-weight: 400; }
+
+.identity-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 10vw, 10rem);
+  line-height: .82;
+  letter-spacing: -.05em;
+}
+
+.identity-type small {
+  margin: .5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .65rem;
+  font-style: normal;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.venue {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, .6fr);
+  gap: 0;
+  padding: 0;
+  background: var(--limestone);
+}
+
+.venue-image { min-height: 100svh; }
+
+.venue-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(32px, 6vw, 96px);
+}
+
+.venue-copy h2 {
+  margin: 1.5rem 0 2.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 400;
+  line-height: .72;
+  letter-spacing: -.06em;
+}
+
+.venue-copy p:not(.eyebrow) {
+  margin: .25rem 0;
+  font-size: .72rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--harbour);
+  color: var(--cream);
+}
+
+.closing h2 {
+  margin: 2rem 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(6rem, 17vw, 16rem);
+  font-weight: 400;
+  line-height: .67;
+  letter-spacing: -.075em;
+}
+
+.closing-copy {
+  max-width: 520px;
+  align-self: flex-end;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+.footer-mark {
+  margin: 3rem 0 0;
+  font-size: .65rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .section { padding: 24px; }
+
+  .hero h1 { font-size: clamp(5rem, 25vw, 8rem); }
+  .hero h1 span { margin-left: 38vw; }
+
+  .countdown-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 1rem;
+  }
+
+  .editorial-copy {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .photo-pair {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .photo-portrait.offset { margin-top: 0; }
+
+  .venue { grid-template-columns: 1fr; }
+  .venue-image { min-height: 65svh; }
+
+  .venue-copy {
+    min-height: 70svh;
+    padding: 40px 24px;
+  }
+
+  .closing-copy { align-self: flex-start; }
+}
